@@ -44,7 +44,7 @@ battery_state=`/usr/bin/acpi -b | grep -P -o '[a-zA-Z]+(?=,)' | tr 'A-Z' 'a-z'`
 message="Battery is ${battery_state} at level ${battery_level}%!"
 
 # Battery level is higher than threshold and still charging
-if [ $battery_level -gt $threshold_high -a $battery_state == "charging" ]; then
+if [ $battery_level -gt $threshold_high -a \( $battery_state == "charging" -o $battery_state == "full" \) ]; then
     notify "Battery full, unplug from power" "$message"
 # Battery level is lower than threshold and still discharging
 elif [ $battery_level -lt $threshold_low -a $battery_state == "discharging" ]; then
