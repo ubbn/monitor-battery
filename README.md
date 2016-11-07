@@ -1,0 +1,2 @@
+# Long live battery
+Long battery life is good to have. So it is wise to save your laptop's battery while using it. The most common causes of battery drain are that discharing your battery completely or keeping plugged in when it is fully charged. While we are working on your laptop, we often forget to care whether it is fully charged or discharged. I wrote and use this script on fedora to check my laptop's battery level and notify me at given threshold values.
